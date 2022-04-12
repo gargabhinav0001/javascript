@@ -1,1 +1,37 @@
 // level {1/2/3}
+
+
+//===================sum of fabonacci series
+
+
+    funciton fabonacciTerm( nthTerm){
+        
+        if(nthTerm == 1 || nthTerm ==2){
+            return 1;
+        }
+        else{
+           return  fabonacciTerm(nthTerm-1) + fabonacciTerm(nthTerm-2)
+        }
+        
+    }
+
+	//call this function to find the sum of fabonacci series
+    funciton findSumOfFabonacciTerms( val ){
+        
+        if(val == 0 ){
+            return ;
+        }
+        
+        const arr = [];
+        
+        for(let i=1; i<= val; i++ ){
+            arr.push(fabonacciTerm(i));
+        }
+        
+        let sum =0; 
+        for(let i=0; i< arr.length; i++){
+            sum  = sum + arr[i];
+        }
+        return sum;
+
+    }
